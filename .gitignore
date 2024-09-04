@@ -1,0 +1,13 @@
+*.csv
+*.xlsx
+*.xls
+*.docx
+*.pdf
+*.html
+*.txt
+*.pptx
+*.png
+*.json
+*.pkl
+*.feather
+*.exe
