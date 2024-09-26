@@ -13,3 +13,5 @@
 *.feather
 *.exe
 *.pyc
+chrome-data/
+selenium/
