@@ -13,6 +13,7 @@
 *.feather
 *.exe
 *.pyc
+*.xml
 chrome-data/
 selenium/
 credentials.py
