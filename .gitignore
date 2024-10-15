@@ -14,6 +14,10 @@
 *.exe
 *.pyc
 *.xml
+*.geojson
 chrome-data/
 selenium/
 credentials.py
+BasicPython/env/
+.ipynb_checkpoints/
+.virtual_documents/
