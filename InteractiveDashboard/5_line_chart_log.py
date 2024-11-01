@@ -33,11 +33,24 @@ df_grouped['Banyak'] = np.log10(df_grouped['count'])
 first_column = df_grouped.pop('No')
 df_grouped.insert(0, 'No', first_column)
 
+df_filtered_date['DayName'] = pd.to_datetime(df_filtered_date['OrderDate']).dt.day_name()
+df_grouped_day = df_filtered_date.groupby('DayName')['TotalDue'].agg(['sum']).reset_index()
+day_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+df_grouped_day['DayName'] = pd.Categorical(df_grouped_day['DayName'], categories=day_order, ordered=True)
+
+df_grouped_day['No'] = range(1, len(df_grouped_day) + 1)
+df_grouped_day['Nilai'] = df_grouped_day['sum']
+first_column = df_grouped_day.pop('No')
+df_grouped_day.insert(0, 'No', first_column)
+
 # Main Page
 st.title('Membuat Line Chart dengan Log10')
 
 st.header('Line Chart dengan Log10')
 st.line_chart(df_grouped, x='OrderDate', y=['Nilai', 'Banyak'], x_label='Tanggal', y_label='Penjualan')
+
+st.header('Hari Terlaris')
+st.bar_chart(df_grouped_day, x='DayName', y=['Nilai'], x_label='Hari', y_label='Penjualan')
 
 st.header('Data yang difilter OrderDate')
 st.dataframe(df_grouped, hide_index=True)

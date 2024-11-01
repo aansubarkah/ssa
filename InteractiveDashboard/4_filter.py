@@ -10,7 +10,6 @@ df['OrderDate'] = pd.to_datetime(df['OrderDate']).dt.date
 st.header('Data dari CSV')
 st.write(df)
 
-
 st.sidebar.header('Filter data')
 
 teritoryids = df['TerritoryID'].unique().tolist()

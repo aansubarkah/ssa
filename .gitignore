@@ -16,6 +16,8 @@
 *.xml
 *.mp4
 *.wav
+*.jpg
+*.xz
 *.geojson
 chrome-data/
 selenium/
