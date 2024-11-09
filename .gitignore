@@ -22,6 +22,7 @@
 chrome-data/
 selenium/
 credentials.py
+pwd.py
 BasicPython/env/
 .ipynb_checkpoints/
 .virtual_documents/
