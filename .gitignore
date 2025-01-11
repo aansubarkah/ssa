@@ -27,3 +27,6 @@ BasicPython/env/
 .ipynb_checkpoints/
 .virtual_documents/
 *.code-workspace
+!basic_python/*.jpg
+!basic_python/*.png
+!basic_python/*.pdf
