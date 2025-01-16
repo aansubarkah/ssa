@@ -30,3 +30,4 @@ BasicPython/env/
 !basic_python/*.jpg
 !basic_python/*.png
 !basic_python/*.pdf
+!basic_python/*.csv
