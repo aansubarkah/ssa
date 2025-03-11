@@ -33,3 +33,4 @@ BasicPython/env/
 !basic_python/*.csv
 !basic_python/*.xlsx
 !DataDikti/penerima_beasiswa.xlsx
+!DataDikti/*.jpg
