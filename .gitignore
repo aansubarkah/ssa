@@ -8,6 +8,7 @@
 *.txt
 *.pptx
 *.png
+*.jpeg
 *.json
 *.pkl
 *.feather
