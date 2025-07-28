@@ -1,0 +1,1 @@
+Update what we achieve in PLANNING.md and TASKS.md. Summarize on CLAUDE.md. Git commit and Git Push.
