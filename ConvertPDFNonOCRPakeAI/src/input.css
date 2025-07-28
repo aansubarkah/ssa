@@ -1,3 +1,160 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Components for PDF to Excel Converter */
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-md font-medium cursor-pointer transition-all duration-200 border-none;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed;
+  }
+  
+  .btn-success {
+    @apply bg-green-600 text-white hover:bg-green-700;
+  }
+  
+  .btn-purple {
+    @apply bg-purple-600 text-white hover:bg-purple-700;
+  }
+  
+  .btn-grayed {
+    @apply bg-gray-400 text-white cursor-not-allowed hover:bg-gray-400;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-sm p-6 mb-6;
+  }
+  
+  .upload-zone {
+    @apply border-2 border-dashed border-gray-300 rounded-lg p-8 text-center text-gray-500 cursor-pointer hover:border-blue-500 hover:bg-blue-50 transition-colors;
+  }
+  
+  .progress-bar {
+    @apply bg-gray-200 h-2 rounded-full overflow-hidden;
+  }
+  
+  .progress-fill {
+    @apply bg-blue-500 h-full transition-all duration-300 ease-out;
+  }
+  
+  .thumbnail {
+    @apply w-full h-24 object-cover rounded-md;
+  }
+  
+  .thumbnail-container {
+    @apply relative transition-transform duration-200 hover:scale-105;
+  }
+  
+  .feature-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-8;
+  }
+  
+  .feature-card {
+    @apply bg-white p-6 rounded-lg border border-gray-200 text-center;
+  }
+  
+  .feature-icon {
+    @apply w-12 h-12 mx-auto mb-4 text-blue-600;
+  }
+  
+  .faq-item {
+    @apply mb-4 border border-gray-200 rounded-md;
+  }
+  
+  .faq-question {
+    @apply p-4 cursor-pointer bg-gray-50 font-medium hover:bg-gray-100 transition-colors;
+  }
+  
+  .faq-answer {
+    @apply p-4 border-t border-gray-200 hidden;
+  }
+  
+  .faq-answer.active {
+    @apply block;
+  }
+  
+  .status-success {
+    @apply bg-green-50 border border-green-200 text-green-800;
+  }
+  
+  .status-error {
+    @apply bg-red-50 border border-red-200 text-red-800;
+  }
+  
+  .status-warning {
+    @apply bg-yellow-50 border border-yellow-200 text-yellow-800;
+  }
+  
+  .log {
+    @apply bg-gray-50 rounded-md p-4 max-h-64 overflow-y-auto font-mono text-sm;
+  }
+  
+  .modal {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+  }
+  
+  .modal-content {
+    @apply bg-white p-8 rounded-lg max-w-md w-11/12 text-center;
+  }
+  
+  .modal-title {
+    @apply text-xl font-semibold mb-4 text-red-600;
+  }
+  
+  .modal-message {
+    @apply mb-6 text-gray-700;
+  }
+  
+  .modal-button {
+    @apply px-6 py-3 bg-red-600 text-white rounded-md cursor-pointer font-medium hover:bg-red-700 transition-colors border-none;
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+  
+  .animate-pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+}
+
+/* Badge Components (Custom since they have complex positioning) */
+.badge {
+  @apply absolute top-1 right-1 w-6 h-6 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold;
+}
+
+.badge-pending {
+  @apply bg-gray-300 text-gray-600;
+}
+
+.badge-processing {
+  @apply bg-yellow-500 text-white;
+  animation: pulse 2s infinite;
+}
+
+.badge-success {
+  @apply bg-green-500 text-white;
+}
+
+.badge-error {
+  @apply bg-red-500 text-white;
+}
+
+.badge svg {
+  @apply w-4 h-4 text-white;
+}
