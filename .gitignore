@@ -37,3 +37,4 @@ BasicPython/env/
 !DataDikti/*.jpg
 
 ConvertPDFNonOCRPakeAI/node_modules/
+ConvertPDFNonOCRPakeAI/deploy*
