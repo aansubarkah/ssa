@@ -38,3 +38,5 @@ BasicPython/env/
 
 ConvertPDFNonOCRPakeAI/node_modules/
 ConvertPDFNonOCRPakeAI/deploy*
+ConvertPDFNonOCRPakeAI/dist/
+node_modules/
