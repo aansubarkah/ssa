@@ -29,6 +29,6 @@ This folder contains production-ready versions of the Local PDF to Excel Convert
 3. Select your Ollama model from the dropdown
 4. Upload PDF files and convert to Excel
 
-Built on: 2025-08-01T15:16:11.813Z
-Original size: 59.219 bytes
-Optimized sizes: 58.717 - 56.629 bytes
+Built on: 2025-08-03T05:24:38.994Z
+Original size: 60.829 bytes
+Optimized sizes: 60.327 - 58.169 bytes
